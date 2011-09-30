@@ -1,0 +1,26 @@
+run("echo  gem \\'rake\\', \\'0.8.7\\' >> Gemfile;")
+run("echo group :test, :development do >> Gemfile;")
+run("echo  gem \\'rspec-rails\\', \\'\\>\\= 2.3.0\\' >> Gemfile;")
+run("echo  gem \\'capybara\\', \\'0.3.9\\' >> Gemfile;")
+run("echo  gem \\'database_cleaner\\' >> Gemfile;")
+run("echo  gem \\'cucumber-rails\\' >> Gemfile;")
+run("echo  gem \\'launchy\\' >> Gemfile;")
+run("echo end >> Gemfile;")
+
+run("bundle install")
+
+generate("rspec:install")
+
+rake("db:migrate")
+
+run("rm -rf features")
+
+git(:clone => "http://github.com/sarahmei/workshop-features.git")
+
+run("mv workshop-features features")
+inside("features") { run("rm -rf .git") } 
+
+generate("cucumber:install --rspec --capybara --force")
+
+inside("config") { run("echo default: --format pretty > cucumber.yml") }
+

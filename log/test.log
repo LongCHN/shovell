@@ -1,0 +1,223 @@
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.6ms)[0m  INSERT INTO "stories" ("name", "created_at", "updated_at", "link") VALUES ('My test submission', '2011-08-22 23:04:01.243754', '2011-08-22 23:04:01.243754', 'http://www.testsubmission.com/')
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "stories" ("link", "created_at", "name", "updated_at") VALUES ('http://www.testsubmission.com/', '2011-08-22 23:13:26.580995', 'My test submission', '2011-08-22 23:13:26.580995')
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "stories" ("name", "created_at", "updated_at", "link") VALUES ('My test submission', '2011-08-22 23:15:09.086934', '2011-08-22 23:15:09.086934', 'http://www.testsubmission.com/')
+  Processing by StoriesController#index as HTML
+  [1m[36mStory Load (0.3ms)[0m  [1mSELECT "stories".* FROM "stories" ORDER BY RANDOM() LIMIT 1[0m
+Rendered stories/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 27ms (Views: 14.2ms | ActiveRecord: 1.1ms)
+  Processing by StoriesController#index as HTML
+  [1m[36mStory Load (0.3ms)[0m  [1mSELECT "stories".* FROM "stories" ORDER BY RANDOM() LIMIT 1[0m
+Rendered stories/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 27ms (Views: 13.9ms | ActiveRecord: 1.1ms)
+  Processing by StoriesController#index as HTML
+  [1m[36mStory Load (0.3ms)[0m  [1mSELECT "stories".* FROM "stories" ORDER BY RANDOM() LIMIT 1[0m
+Rendered stories/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 27ms (Views: 14.0ms | ActiveRecord: 1.1ms)
+  Processing by StoriesController#new as HTML
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (37.0ms)[0m  INSERT INTO "stories" ("name", "created_at", "updated_at", "link") VALUES ('My test submission', '2011-08-22 23:43:44.562249', '2011-08-22 23:43:44.562249', 'http://www.testsubmission.com/')
+  Processing by StoriesController#create as HTML
+  Parameters: {"story"=>{"name"=>"test story", "link"=>"http://www.test.com/"}}
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "stories" ("created_at", "updated_at", "link", "name") VALUES ('2011-08-22 23:43:46.664745', '2011-08-22 23:43:46.664745', 'http://www.test.com/', 'test story')
+Redirected to http://test.host/stories
+Completed 302 Found in 26ms
+  Processing by StoriesController#create as HTML
+  Parameters: {"story"=>{"name"=>"story without a link"}}
+Completed 200 OK in 21ms (Views: 12.9ms | ActiveRecord: 1.4ms)
+  Processing by StoriesController#index as HTML
+  [1m[36mStory Load (0.4ms)[0m  [1mSELECT "stories".* FROM "stories" ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 0.4ms)
+  Processing by StoriesController#new as HTML
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+  Processing by StoriesController#new as HTML
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "stories" ("link", "created_at", "name", "updated_at") VALUES ('http://www.testsubmission.com/', '2011-09-21 06:24:16.738656', 'My test submission', '2011-09-21 06:24:16.738656')
+  [1m[36mVote Load (0.2ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."id" = 980190962 LIMIT 1[0m
+  [1m[35mVote Load (0.1ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."id" = 298486374 LIMIT 1
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 980190962 LIMIT 1[0m
+  [1m[35mVote Load (0.2ms)[0m  SELECT "votes".* FROM "votes" WHERE ("votes".story_id = 980190962)
+  [1m[36mStory Load (0.3ms)[0m  [1mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 980190962 LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:24:16.848039', '2011-09-21 06:24:16.848039')
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:24:16.851742', '2011-09-21 06:24:16.851742')[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:24:16.854525', '2011-09-21 06:24:16.854525')
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:24:16.857257', '2011-09-21 06:24:16.857257')[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:24:16.860160', '2011-09-21 06:24:16.860160')
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:24:16.863351', '2011-09-21 06:24:16.863351')[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:24:16.866170', '2011-09-21 06:24:16.866170')
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:24:16.868995', '2011-09-21 06:24:16.868995')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:24:16.871815', '2011-09-21 06:24:16.871815')
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:24:16.935315', '2011-09-21 06:24:16.935315')[0m
+  [1m[35mVote Load (0.3ms)[0m  SELECT "votes".* FROM "votes" WHERE ("votes".story_id = 980190962) ORDER BY id DESC LIMIT 3
+  [1m[36mVote Load (0.2ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."id" = 298486374 LIMIT 1[0m
+  [1m[35mStory Load (0.2ms)[0m  SELECT "stories".* FROM "stories" WHERE "stories"."id" = 980190962 LIMIT 1
+  [1m[36mVote Load (0.2ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE ("votes".story_id = 980190962) ORDER BY id DESC LIMIT 3[0m
+  [1m[35mStory Load (0.2ms)[0m  SELECT "stories".* FROM "stories" WHERE "stories"."id" = 980190962 LIMIT 1
+  [1m[36mVote Load (0.1ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."id" = 980190962 LIMIT 1[0m
+  [1m[35mStory Load (0.2ms)[0m  SELECT "stories".* FROM "stories" WHERE "stories"."id" = 980190962 LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "stories" ("link", "created_at", "name", "updated_at") VALUES ('http://www.testsubmission.com/', '2011-09-21 06:24:30.034805', 'My test submission', '2011-09-21 06:24:30.034805')
+  [1m[36mVote Load (0.2ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."id" = 980190962 LIMIT 1[0m
+  [1m[35mVote Load (0.1ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."id" = 298486374 LIMIT 1
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 980190962 LIMIT 1[0m
+  [1m[35mVote Load (0.2ms)[0m  SELECT "votes".* FROM "votes" WHERE ("votes".story_id = 980190962)
+  [1m[36mStory Load (0.3ms)[0m  [1mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 980190962 LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:24:30.081763', '2011-09-21 06:24:30.081763')
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:24:30.085538', '2011-09-21 06:24:30.085538')[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:24:30.088728', '2011-09-21 06:24:30.088728')
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:24:30.091521', '2011-09-21 06:24:30.091521')[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:24:30.094453', '2011-09-21 06:24:30.094453')
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:24:30.097665', '2011-09-21 06:24:30.097665')[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:24:30.100688', '2011-09-21 06:24:30.100688')
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:24:30.103688', '2011-09-21 06:24:30.103688')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:24:30.106725', '2011-09-21 06:24:30.106725')
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:24:30.171250', '2011-09-21 06:24:30.171250')[0m
+  [1m[35mVote Load (0.3ms)[0m  SELECT "votes".* FROM "votes" WHERE ("votes".story_id = 980190962) ORDER BY id DESC LIMIT 3
+  [1m[36mVote Load (0.2ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."id" = 298486374 LIMIT 1[0m
+  [1m[35mStory Load (0.2ms)[0m  SELECT "stories".* FROM "stories" WHERE "stories"."id" = 980190962 LIMIT 1
+  [1m[36mVote Load (0.2ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE ("votes".story_id = 980190962) ORDER BY id DESC LIMIT 3[0m
+  [1m[35mStory Load (0.2ms)[0m  SELECT "stories".* FROM "stories" WHERE "stories"."id" = 980190962 LIMIT 1
+  [1m[36mVote Load (0.2ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."id" = 980190962 LIMIT 1[0m
+  [1m[35mStory Load (0.2ms)[0m  SELECT "stories".* FROM "stories" WHERE "stories"."id" = 980190962 LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "stories" ("link", "created_at", "name", "updated_at") VALUES ('http://www.testsubmission.com/', '2011-09-21 06:29:38.411275', 'My test submission', '2011-09-21 06:29:38.411275')
+  [1m[36mVote Load (0.2ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."id" = 980190962 LIMIT 1[0m
+  [1m[35mVote Load (0.1ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."id" = 298486374 LIMIT 1
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 980190962 LIMIT 1[0m
+  [1m[35mVote Load (0.2ms)[0m  SELECT "votes".* FROM "votes" WHERE ("votes".story_id = 980190962)
+  [1m[36mStory Load (0.3ms)[0m  [1mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 980190962 LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:29:38.458566', '2011-09-21 06:29:38.458566')
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:29:38.462517', '2011-09-21 06:29:38.462517')[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:29:38.465383', '2011-09-21 06:29:38.465383')
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:29:38.468138', '2011-09-21 06:29:38.468138')[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:29:38.471019', '2011-09-21 06:29:38.471019')
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:29:38.473971', '2011-09-21 06:29:38.473971')[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:29:38.476841', '2011-09-21 06:29:38.476841')
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:29:38.479734', '2011-09-21 06:29:38.479734')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:29:38.482518', '2011-09-21 06:29:38.482518')
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:29:38.546395', '2011-09-21 06:29:38.546395')[0m
+  [1m[35mVote Load (0.3ms)[0m  SELECT "votes".* FROM "votes" WHERE ("votes".story_id = 980190962) ORDER BY id DESC LIMIT 3
+  [1m[36mVote Load (0.2ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."id" = 298486374 LIMIT 1[0m
+  [1m[35mStory Load (0.2ms)[0m  SELECT "stories".* FROM "stories" WHERE "stories"."id" = 980190962 LIMIT 1
+  [1m[36mVote Load (0.2ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE ("votes".story_id = 980190962) ORDER BY id DESC LIMIT 3[0m
+  [1m[35mStory Load (0.2ms)[0m  SELECT "stories".* FROM "stories" WHERE "stories"."id" = 980190962 LIMIT 1
+  [1m[36mVote Load (0.1ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."id" = 980190962 LIMIT 1[0m
+  [1m[35mStory Load (0.2ms)[0m  SELECT "stories".* FROM "stories" WHERE "stories"."id" = 980190962 LIMIT 1
+  Processing by StoriesController#create as HTML
+  Parameters: {"story"=>{"name"=>"test story", "link"=>"http://www.test.com/"}}
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "stories" ("name", "updated_at", "created_at", "link") VALUES ('test story', '2011-09-21 06:29:40.635245', '2011-09-21 06:29:40.635245', 'http://www.test.com/')
+Redirected to http://test.host/stories
+Completed 302 Found in 26ms
+  Processing by StoriesController#create as HTML
+  Parameters: {"story"=>{"name"=>"story without a link"}}
+Completed 200 OK in 24ms (Views: 16.8ms | ActiveRecord: 1.7ms)
+  Processing by StoriesController#index as HTML
+  [1m[36mStory Load (0.3ms)[0m  [1mSELECT "stories".* FROM "stories" ORDER BY RANDOM() LIMIT 1[0m
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.3ms)
+  Processing by StoriesController#new as HTML
+Completed 200 OK in 68ms (Views: 67.6ms | ActiveRecord: 0.0ms)
+  Processing by StoriesController#new as HTML
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+  [1m[35mStory Load (0.3ms)[0m  SELECT "stories".* FROM "stories" WHERE "stories"."id" = 980190962 LIMIT 1
+  Processing by StoriesController#show as HTML
+  Parameters: {"id"=>#<Story id: 980190962, name: "My shiny weblog", link: "http://poocs.net/", created_at: "2011-09-21 06:29:40", updated_at: "2011-09-21 06:29:40">}
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 980190962 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE ("votes".story_id = 980190962)
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE ("votes".story_id = 980190962)[0m
+  [1m[35mVote Load (0.2ms)[0m  SELECT "votes".* FROM "votes" WHERE ("votes".story_id = 980190962) ORDER BY id DESC LIMIT 3
+Rendered votes/_vote.html.erb (4.9ms)
+Completed 200 OK in 23ms (Views: 20.4ms | ActiveRecord: 1.0ms)
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 980190962 LIMIT 1[0m
+  Processing by StoriesController#show as HTML
+  Parameters: {"id"=>#<Story id: 980190962, name: "My shiny weblog", link: "http://poocs.net/", created_at: "2011-09-21 06:29:40", updated_at: "2011-09-21 06:29:40">}
+  [1m[35mStory Load (0.2ms)[0m  SELECT "stories".* FROM "stories" WHERE "stories"."id" = 980190962 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE ("votes".story_id = 980190962)[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE ("votes".story_id = 980190962)
+  [1m[36mVote Load (0.2ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE ("votes".story_id = 980190962) ORDER BY id DESC LIMIT 3[0m
+Rendered votes/_vote.html.erb (0.7ms)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.9ms)
+  [1m[35mStory Load (0.2ms)[0m  SELECT "stories".* FROM "stories" WHERE "stories"."id" = 298486374 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE ("votes".story_id = 298486374)[0m
+  Processing by VotesController#create as HTML
+  Parameters: {"story_id"=>#<Story id: 298486374, name: "SitePoint Forums", link: "http://www.sitepoint.com/forums/", created_at: "2011-09-21 06:29:40", updated_at: "2011-09-21 06:29:40">}
+  [1m[35mStory Load (0.2ms)[0m  SELECT "stories".* FROM "stories" WHERE "stories"."id" = 298486374 LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "votes" ("story_id", "created_at", "updated_at") VALUES (298486374, '2011-09-21 06:29:40.900126', '2011-09-21 06:29:40.900126')[0m
+Redirected to http://test.host/stories/298486374-sitepoint-forums
+Completed 302 Found in 9ms
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE ("votes".story_id = 298486374)
+  [1m[36mStory Load (0.3ms)[0m  [1mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 298486374 LIMIT 1[0m
+  Processing by VotesController#create as HTML
+  Parameters: {"story_id"=>#<Story id: 298486374, name: "SitePoint Forums", link: "http://www.sitepoint.com/forums/", created_at: "2011-09-21 06:29:40", updated_at: "2011-09-21 06:29:40">}
+  [1m[35mStory Load (0.2ms)[0m  SELECT "stories".* FROM "stories" WHERE "stories"."id" = 298486374 LIMIT 1
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO "votes" ("story_id", "created_at", "updated_at") VALUES (298486374, '2011-09-21 06:29:40.924726', '2011-09-21 06:29:40.924726')[0m
+Redirected to http://test.host/stories/298486374-sitepoint-forums
+Completed 302 Found in 8ms
+  [1m[35mStory Load (0.3ms)[0m  SELECT "stories".* FROM "stories" WHERE "stories"."id" = 298486374 LIMIT 1
+  Processing by VotesController#create as JS
+  Parameters: {"story_id"=>#<Story id: 298486374, name: "SitePoint Forums", link: "http://www.sitepoint.com/forums/", created_at: "2011-09-21 06:29:40", updated_at: "2011-09-21 06:29:40">}
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 298486374 LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "votes" ("story_id", "created_at", "updated_at") VALUES (298486374, '2011-09-21 06:29:40.941950', '2011-09-21 06:29:40.941950')
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE ("votes".story_id = 298486374)[0m
+  [1m[35mVote Load (0.2ms)[0m  SELECT "votes".* FROM "votes" WHERE ("votes".story_id = 298486374) ORDER BY id DESC LIMIT 3
+Rendered votes/_vote.html.erb (0.5ms)
+Completed 200 OK in 28ms (Views: 21.8ms | ActiveRecord: 3.3ms)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "stories" ("link", "created_at", "name", "updated_at") VALUES ('http://www.testsubmission.com/', '2011-09-21 06:30:55.933425', 'My test submission', '2011-09-21 06:30:55.933425')
+  [1m[36mVote Load (0.2ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."id" = 980190962 LIMIT 1[0m
+  [1m[35mVote Load (0.1ms)[0m  SELECT "votes".* FROM "votes" WHERE "votes"."id" = 298486374 LIMIT 1
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 980190962 LIMIT 1[0m
+  [1m[35mVote Load (0.2ms)[0m  SELECT "votes".* FROM "votes" WHERE ("votes".story_id = 980190962)
+  [1m[36mStory Load (0.3ms)[0m  [1mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 980190962 LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:30:55.980200', '2011-09-21 06:30:55.980200')
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:30:55.984222', '2011-09-21 06:30:55.984222')[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:30:55.987135', '2011-09-21 06:30:55.987135')
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:30:55.989982', '2011-09-21 06:30:55.989982')[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:30:55.992969', '2011-09-21 06:30:55.992969')
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:30:55.996008', '2011-09-21 06:30:55.996008')[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:30:55.998853', '2011-09-21 06:30:55.998853')
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:30:56.001692', '2011-09-21 06:30:56.001692')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:30:56.004527', '2011-09-21 06:30:56.004527')
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "votes" ("story_id", "updated_at", "created_at") VALUES (980190962, '2011-09-21 06:30:56.067637', '2011-09-21 06:30:56.067637')[0m
+  [1m[35mVote Load (0.3ms)[0m  SELECT "votes".* FROM "votes" WHERE ("votes".story_id = 980190962) ORDER BY id DESC LIMIT 3
+  [1m[36mVote Load (0.2ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."id" = 298486374 LIMIT 1[0m
+  [1m[35mStory Load (0.2ms)[0m  SELECT "stories".* FROM "stories" WHERE "stories"."id" = 980190962 LIMIT 1
+  [1m[36mVote Load (0.3ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE ("votes".story_id = 980190962) ORDER BY id DESC LIMIT 3[0m
+  [1m[35mStory Load (0.2ms)[0m  SELECT "stories".* FROM "stories" WHERE "stories"."id" = 980190962 LIMIT 1
+  [1m[36mVote Load (0.2ms)[0m  [1mSELECT "votes".* FROM "votes" WHERE "votes"."id" = 980190962 LIMIT 1[0m
+  [1m[35mStory Load (0.2ms)[0m  SELECT "stories".* FROM "stories" WHERE "stories"."id" = 980190962 LIMIT 1
